@@ -70,7 +70,6 @@ function checkLotStatus(){
             if (lots[i].classList.contains(lotNumber)){
                 lots[i].style.backgroundColor = 'yellow';
                 lots[i].classList.add('eaten');
-                console.log(eatenLots[index]);
             }
         }
     })
@@ -81,6 +80,7 @@ function checkLotStatus(){
 function changeLotColor(e) {
   if (e.target.classList.contains("lot") && !e.target.classList.contains('eaten')) {
     e.target.style.backgroundColor = "red";
+    e.target.classList.add('eaten');
     assignLotResidents(e.target);
     eatenLots.push(e.target.classList[0]);
     localStorage.setItem('eatenLots', JSON.stringify(eatenLots));
