@@ -1,0 +1,15 @@
+.fields{
+    width: 800px;
+    height: 800px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.lot{
+    background-color: green;
+    border: 1px solid black;
+    height: 180px;
+    width: 180px;
+}

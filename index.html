@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Flockin' Around</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h3>Flockin' Around</h3>
+    <h5>Find a spot for your flock.</h5>
+    <form id="number-of-sheep">
+      <label for="sheep-number">How many sheep do you have?</label>
+      <input id="sheep-number" type="text" placeholder="but reaaalllly" />
+      <button id="calculate-btn">Calculate lots</button>
+    </form>
+    <form id="nameSheepForm">
+      <p>What are your sheeps' names?</p>
+      <!-- <label for="sheep-name">Name</label>
+        <input id="sheep-name" type="text" placeholder="Lamb Chop"> -->
+      <button type="button" id="add-name">Add Name</button>
+    </form>
+
+    <div id="lotsToClick">
+      <p>You can choose <span id="calculatedLots"></span> fields!</p>
+    </div>
+    <div id="noMoreLots">
+      <p>You've selected all the lots for today!</p>
+      <button id="newDay">New Day, Same Flock?</button>
+      <button id="newFlock">Nah man, New Flock!</button>
+    </div>
+
+    <section class="fields">
+      <div class="1 lot"></div>
+      <div class="2 lot"></div>
+      <div class="3 lot"></div>
+      <div class="4 lot"></div>
+      <div class="5 lot"></div>
+      <div class="6 lot"></div>
+      <div class="7 lot"></div>
+      <div class="8 lot"></div>
+      <div class="9 lot"></div>
+      <div class="10 lot"></div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
