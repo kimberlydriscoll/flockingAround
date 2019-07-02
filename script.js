@@ -55,20 +55,16 @@ function lotCalculator(e) {
     }
   }
   calculatedLots.textContent = calculating;
-  console.log(
-    "caulculating/the number of lots we can click on is " + calculating
-  );
 }
 
 // check lot status - see if any need to be yellow while they regrow
 function checkLotStatus(){
-    console.log(eatenLots);
     let lots = document.querySelectorAll('.lot');
     eatenLots.forEach(function(lotNumber, index){
-        console.log(lots);
         for(let i =0; i < lots.length; i++){
             if (lots[i].classList.contains(lotNumber)){
-                lots[i].style.backgroundColor = 'yellow';
+                lots[i].style.backgroundColor = '#996600';
+                lots[i].textContent = "currently unavailable: grass is growing back";
                 lots[i].classList.add('eaten');
             }
         }
@@ -79,7 +75,7 @@ function checkLotStatus(){
 // click on the lots, change the color
 function changeLotColor(e) {
   if (e.target.classList.contains("lot") && !e.target.classList.contains('eaten')) {
-    e.target.style.backgroundColor = "red";
+    e.target.style.backgroundColor = "#006600";
     e.target.classList.add('eaten');
     assignLotResidents(e.target);
     eatenLots.push(e.target.classList[0]);
